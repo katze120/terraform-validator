@@ -48,6 +48,7 @@ func init() {
 	rootCmd.AddCommand(listSupportedResourcesCmd)
 	rootCmd.AddCommand(validateCmd)
 	rootCmd.AddCommand(versionCmd)
+	rootCmd.AddCommand(billingCmd)
 }
 
 // NOTE: We use a pkg-level var here instead of github.com/spf13/viper
@@ -70,6 +71,7 @@ var flags struct {
 		outputJSON bool
 	}
 	listSupportedResources struct{}
+	billingReview          struct{}
 }
 
 // Execute is the entry-point for all commands.
